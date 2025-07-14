@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다빈치 리졸브 컬러 그레이딩 마스터 튜토리얼</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for better typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Applying a clean, readable font across the page */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        /* Custom styles for better visual presentation */
+        .step-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .step-number {
+            font-weight: 900; /* Extra bold for step numbers */
+            font-size: 1.5rem;
+            color: #4f46e5; /* Indigo color for emphasis */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+
+    <div class="container mx-auto p-4 md:p-8">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 dark:text-white mb-2">🎨 다빈치 리졸브 컬러 그레이딩</h1>
+            <p class="text-lg text-indigo-600 dark:text-indigo-400 font-semibold">완벽 마스터 튜토리얼</p>
+            <p class="max-w-3xl mx-auto mt-4 text-base text-gray-600 dark:text-gray-400">
+                Log로 촬영된 원본 영상을 전문적인 워크플로우를 통해 완성도 높은 결과물로 만드는 전 과정을 단계별로 안내합니다.
+            </p>
+        </header>
+
+        <!-- Tutorial Steps Grid -->
+        <main class="space-y-12">
+            
+            <!-- Step 1: Color Management -->
+            <section id="step1" class="step-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white"><span class="step-number">STEP 1.</span> 프로젝트 컬러 매니지먼트 설정</h2>
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">정확하고 일관된 색상 작업을 위한 기초 공사입니다. 작업의 기준이 되는 가장 중요한 첫 단계입니다.</p>
+                    <ul class="mt-4 space-y-2 text-sm list-disc list-inside">
+                        <li><strong class="font-semibold text-gray-700 dark:text-gray-200">Color Science:</strong> <code>DaVinci YRGB</code></li>
+                        <li><strong class="font-semibold text-gray-700 dark:text-gray-200">Timeline Color Space:</strong> <code>DaVinci WG/Intermediate</code> (넓은 색 영역)</li>
+                        <li><strong class="font-semibold text-gray-700 dark:text-gray-200">Output Color Space:</strong> <code>Rec.709 Gamma 2.4</code> (웹/방송 표준)</li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="1_컬러_매니지먼트_설정.png" alt="다빈치 리졸브 컬러 매니지먼트 설정" class="w-full h-full object-cover">
+                </div>
+            </section>
+
+            <!-- Step 2: Node Structure -->
+            <section id="step2" class="step-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white"><span class="step-number">STEP 2.</span> 체계적인 노드 구성</h2>
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">작업의 효율성과 가독성을 높이기 위해 노드를 역할별로 미리 구성하여 작업의 흐름을 만듭니다.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="2_노드_구성_세팅.png" alt="체계적인 노드 구성" class="w-full h-full object-contain p-4">
+                </div>
+            </section>
+
+            <!-- Step 3-5: Color Space Transform (CST) -->
+            <section id="step3" class="step-card bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center"><span class="step-number">STEP 3-5.</span> 컬러 스페이스 변환 (CST) 적용</h2>
+                <p class="text-center mt-2 text-gray-600 dark:text-gray-300">촬영 원본을 작업용으로, 작업물을 최종 출력용으로 정확하게 변환하는 핵심 과정입니다.</p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <img src="3_CST_효과_넣기.png" alt="CST 효과 적용하기" class="rounded-lg shadow-md">
+                        <h3 class="mt-4 font-semibold">1. CST 효과 적용</h3>
+                    </div>
+                    <div class="text-center">
+                        <img src="4_컬러_스페이스_트랜스폼_in_세팅.png" alt="CST In 설정" class="rounded-lg shadow-md">
+                        <h3 class="mt-4 font-semibold">2. CST In 설정 (원본 → 작업용)</h3>
+                    </div>
+                    <div class="text-center">
+                        <img src="5_컬러_스페이스_트랜스폼_OUT_세팅.png" alt="CST Out 설정" class="rounded-lg shadow-md">
+                        <h3 class="mt-4 font-semibold">3. CST Out 설정 (작업용 → 최종)</h3>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Step 6: White Balance -->
+            <section id="step6" class="step-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white"><span class="step-number">STEP 6.</span> 화이트 밸런스 조정</h2>
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">`Primary Wheels`의 `Offset`을 조정하여 영상의 전체적인 색온도를 맞춰 중립적인 톤을 만듭니다. 스코프의 RGB 파형을 참고하세요.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="6_화밸_조정.jpg" alt="화이트 밸런스 조정" class="w-full h-full object-cover">
+                </div>
+            </section>
+
+            <!-- Step 7: Exposure -->
+            <section id="step7" class="step-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <div class="p-6 md:p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white"><span class="step-number">STEP 7.</span> 노출 조정 (Primary Correction)</h2>
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">영상의 밝기를 영역별로 세밀하게 조절하여 적절한 대비(Contrast)를 만듭니다.</p>
+                    <img src="8_Lift,Gamma,Gain_정의.jpg" alt="Lift, Gamma, Gain 정의" class="my-6 rounded-lg shadow-md">
+                    <img src="7_노출_조정.jpg" alt="노출 조정" class="rounded-lg shadow-md">
+                </div>
+            </section>
+
+            <!-- Step 8: Log Wheels -->
+            <section id="step8" class="step-card bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden md:flex">
+                <div class="md:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white"><span class="step-number">STEP 8.</span> 로그 휠을 이용한 세부 조정</h2>
+                    <p class="mt-4 text-gray-600 dark:text-gray-300">`Log Wheels`를 사용하면 `Shadow`, `Midtone`, `Highlights` 영역을 더 정교하게 제어하여 미묘하고 풍부한 톤을 만들 수 있습니다.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="9_색보정_로그_휠.jpg" alt="로그 휠을 이용한 색보정" class="w-full h-full object-cover">
+                </div>
+            </section>
+
+            <!-- Step 9-11: Secondary Correction -->
+            <section id="step9" class="step-card bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center"><span class="step-number">STEP 9-11.</span> 개별 색상 조정 (Secondary)</h2>
+                <p class="text-center mt-2 text-gray-600 dark:text-gray-300">영상 전체가 아닌 특정 색상만 선택하여 변경하는 과정입니다.</p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <img src="10_개별_색상_선택.png" alt="Color Slice 툴에서 개별 색상 선택" class="rounded-lg shadow-md">
+                        <h3 class="mt-4 font-semibold text-center">1. Color Slice 툴로 색상 선택</h3>
+                    </div>
+                    <div>
+                        <img src="11_개별_색상_색_조정.jpg" alt="개별 색상 조정 및 퀄리파이어 확인" class="rounded-lg shadow-md">
+                        <h3 class="mt-4 font-semibold text-center">2. 선택 색상 조정 (Qualifier 확인)</h3>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Step 12-14: Creative Effects (Glow) -->
+            <section id="step12" class="step-card bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white text-center"><span class="step-number">STEP 12-14.</span> 창의적 효과 추가 (Glow)</h2>
+                <p class="text-center mt-2 text-gray-600 dark:text-gray-300">기본 보정이 끝난 후, `Glow` 효과 등을 사용하여 영상의 분위기를 극대화합니다.</p>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    <div class="text-center">
+                        <img src="12_선명도_번짐_효과.png" alt="Glow 효과 적용" class="rounded-lg shadow-md">
+                        <h3 class="mt-4 font-semibold">1. Glow 효과 적용</h3>
+                    </div>
+                    <div class="text-center">
+                        <img src="13_선명도_번짐_효과_컨트롤.png" alt="Glow 효과 세부 컨트롤" class="rounded-lg shadow-md">
+                        <h3 class="mt-4 font-semibold">2. Glow 세부 설정</h3>
+                    </div>
+                    <div class="text-center">
+                        <img src="14_선명도_번짐_효과_컨트롤.png" alt="Glow 효과 최종 강도 조절" class="rounded-lg shadow-md">
+                        <h3 class="mt-4 font-semibold">3. 최종 강도 조절 (Blend)</h3>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16 py-8 border-t border-gray-200 dark:border-gray-700">
+            <p class="text-gray-600 dark:text-gray-400">이것으로 다빈치 리졸브를 사용한 체계적인 컬러 그레이딩 워크플로우가 완성됩니다.</p>
+            <p class="text-sm text-gray-500 mt-2">Happy Grading!</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
